@@ -1,0 +1,68 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: brown;
+}
+
+/* Header styles */
+header {
+    background-color: orange;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main content styles */
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: brown;
+}
+
+/* Footer styles */
+footer {
+    background-color: orange;
+    color: orange;
+    text-align: center;
+    padding: 10px;
+}
+
+.post{
+    background-color: pink;
+    border-style: solid;
+    border-color: white;
+}
+
+.mijn-website{
+    color: black;
+    font-size:  40px;
+}
+
+h2 a {
+    color: orange
+}
+
+h2 a:visited { 
+    color: orange
+}
+
+h2 a:hover, h2 a:active {
+    color:black
+}
+
+h2 {
+    color: pink
+}
+
+ul {
+    color: white
+}
+
+li {
+    color: whitesmoke
+}

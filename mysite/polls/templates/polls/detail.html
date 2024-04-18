@@ -1,0 +1,18 @@
+{% extends 'polls/base.html' %}
+
+{% block title %}{{ poll.question }}{% endblock %}
+
+{% block content %}
+    <h2>{{ poll.question }}</h2>
+    <form action="{% url 'polls:vote' poll.id %}" method="post">
+        {% csrf_token %}
+        {% for choice in poll.choice_set.all %}
+            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+        {% endfor %}
+        <p></p> 
+        <button type="submit" class="btn btn-primary mb-3">Stem</button>
+    </form>
+        <p></p>
+    <a href="{% url 'polls:results' poll.id %}">Bekijk de resultaten</a>
+{% endblock %}

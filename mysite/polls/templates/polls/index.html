@@ -1,0 +1,12 @@
+{% extends 'polls/base.html' %}
+
+{% block title %}Home - Django Polls{% endblock %}
+
+{% block content %}
+    <h2>Laatste stemmingen</h2>
+    <ul>
+        {% for poll in latest_poll_list %}
+            <li><a href="{% url 'polls:detail' poll.id %}">{{ poll.question }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

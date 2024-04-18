@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/stijl.css' %}">
+<title>Mijn Website</title>
+</head>
+<body>
+<header class="navbar navbar-expand-lg navbar-black bg-orange">
+    <div class="container">
+        <a class="mijn-website" href="#">Mijn website</a>
+    </div>
+</header>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-6">
+            <div class="bg-light"></div>
+        </div>
+        <div class="col-6">
+            <div class="bg-light"></div>
+
+            {% block content %}
+            {% for post in posts %}
+            <article class="post">
+                <time class="date">
+                    {{ post.published_date }}
+                </time>
+                <h2>
+                    <a href="">{{ post.title }}</a>
+                </h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </article>
+            <p></p>
+            {% endfor %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+<footer class="footer mt-auto py-3 bg-orange text-white">
+    <div class="container text-center">
+        <span>© 2024 Fiveblades
+            <img src="{% static 'images/works.png' %}">
+        </span>
+
+    </div>
+</footer>
+</body>
+</html>
