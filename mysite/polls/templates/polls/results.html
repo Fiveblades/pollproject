@@ -9,5 +9,5 @@
             <li>{{ choice.choice_text }} - {{ choice.votes }} stemmen</li>
         {% endfor %}
     </ul>
-    <a href="{% url 'polls:detail' poll.id %}">Nog een keer stemmen ?</a>
+    <a class="link" href="{% url 'polls:detail' poll.id %}">Nog een keer stemmen ?</a>
 {% endblock %}
