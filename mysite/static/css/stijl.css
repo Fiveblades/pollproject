@@ -74,3 +74,19 @@ form {
 .link {
     color: pink
 }
+
+.link:hover, link:active {
+    color: white
+}
+
+h1 a {
+    color: black
+}
+
+h1 a:visited {
+    color: black
+}
+
+h1 a:hover, h1 a:active {
+    color: grey
+}
