@@ -75,7 +75,7 @@ form {
     color: pink
 }
 
-.link:hover, link:active {
+.link:hover, link a:active {
     color: white
 }
 
